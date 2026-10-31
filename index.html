@@ -1,0 +1,474 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khám phá An Giang</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8f3;
+    color: #263b32;
+    line-height: 1.7;
+}
+
+header {
+    background: #174d3b;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #f4d477;
+}
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+    background:
+    linear-gradient(rgba(0,35,22,.55),rgba(0,35,22,.55)),
+    url("https://upload.wikimedia.org/wikipedia/commons/a/a0/Phong_c%E1%BA%A3nh_n%C3%BAi_C%E1%BA%A5m.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 25px;
+}
+
+.hero a {
+    display: inline-block;
+    background: #f4d477;
+    color: #174d3b;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 65px 8%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-title h2 {
+    color: #174d3b;
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.intro {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 17px;
+}
+
+.places {
+    background: #eaf1e9;
+}
+
+.place-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.place-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+}
+
+.place-card img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+}
+
+.content {
+    padding: 22px;
+}
+
+.content h3 {
+    color: #176044;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #555;
+}
+
+.credit {
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.credit a {
+    color: #176044;
+}
+
+.food {
+    background: #fffdf5;
+}
+
+.food-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.food-item {
+    background: #edf3e9;
+    padding: 28px 20px;
+    border-radius: 13px;
+    text-align: center;
+}
+
+.food-item h3 {
+    color: #176044;
+    margin-bottom: 10px;
+}
+
+.culture {
+    background: #eaf1e9;
+    text-align: center;
+}
+
+.culture p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 17px;
+}
+
+footer {
+    background: #174d3b;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@media(max-width: 768px) {
+    header {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px 8px;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .place-list,
+    .food-list {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">AN GIANG 🌿</div>
+
+    <nav>
+        <a href="#trangchu">Trang chủ</a>
+        <a href="#gioithieu">Giới thiệu</a>
+        <a href="#diadiem">Địa điểm</a>
+        <a href="#amthuc">Ẩm thực</a>
+        <a href="#vanhoa">Văn hóa</a>
+    </nav>
+</header>
+
+<!-- TRANG CHỦ -->
+<div class="hero" id="trangchu">
+    <div class="hero-content">
+        <h1>KHÁM PHÁ AN GIANG</h1>
+
+        <p>
+            Vùng đất miền Tây sông nước với thiên nhiên tươi đẹp,
+            văn hóa đa dạng và những trải nghiệm đáng nhớ.
+        </p>
+
+        <a href="#gioithieu">Bắt đầu khám phá</a>
+    </div>
+</div>
+
+<!-- GIỚI THIỆU -->
+<section id="gioithieu">
+    <div class="section-title">
+        <h2>Giới thiệu về An Giang</h2>
+        <p>Vẻ đẹp bình dị của miền Tây Nam Bộ</p>
+    </div>
+
+    <div class="intro">
+        <p>
+            An Giang là vùng đất nổi tiếng với cảnh quan sông nước,
+            những cánh đồng rộng lớn, núi non và nhiều công trình
+            văn hóa, tâm linh đặc sắc.
+        </p>
+
+        <br>
+
+        <p>
+            Đây còn là nơi giao thoa văn hóa của nhiều cộng đồng
+            dân tộc như Kinh, Khmer, Chăm và Hoa. Không chỉ có
+            thiên nhiên tươi đẹp, An Giang còn hấp dẫn du khách
+            bởi những món ăn đặc sản và con người thân thiện,
+            mộc mạc của miền Tây.
+        </p>
+    </div>
+</section>
+
+<!-- ĐỊA ĐIỂM DU LỊCH -->
+<section class="places" id="diadiem">
+    <div class="section-title">
+        <h2>Địa điểm du lịch nổi tiếng</h2>
+        <p>Những điểm đến không nên bỏ lỡ tại An Giang</p>
+    </div>
+
+    <div class="place-list">
+
+        <!-- NÚI CẤM -->
+        <div class="place-card">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Phong_c%E1%BA%A3nh_n%C3%BAi_C%E1%BA%A5m.jpg"
+                alt="Phong cảnh Núi Cấm, An Giang"
+                loading="lazy"
+            >
+
+            <div class="content">
+                <h3>1. Núi Cấm</h3>
+
+                <p>
+                    Núi Cấm là một trong những ngọn núi nổi tiếng
+                    thuộc vùng Thất Sơn. Nơi đây có cảnh quan thiên
+                    nhiên hùng vĩ, không khí mát mẻ và nhiều công
+                    trình tâm linh đặc sắc.
+                </p>
+
+                <p class="credit">
+                    Nguồn ảnh:
+                    <a href="https://commons.wikimedia.org/wiki/File:Phong_c%E1%BA%A3nh_n%C3%BAi_C%E1%BA%A5m.jpg"
+                    target="_blank">Wikimedia Commons</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- RỪNG TRÀM TRÀ SƯ -->
+        <div class="place-card">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/9/9a/R%E1%BB%ABng_Tr%C3%A0m_Tr%C3%A0_S%C6%B0.JPG"
+                alt="Rừng tràm Trà Sư, An Giang"
+                loading="lazy"
+            >
+
+            <div class="content">
+                <h3>2. Rừng tràm Trà Sư</h3>
+
+                <p>
+                    Rừng tràm Trà Sư nổi bật với hệ sinh thái đất
+                    ngập nước, những hàng tràm xanh mát và thảm bèo
+                    phủ trên mặt nước. Du khách có thể trải nghiệm
+                    đi xuồng tham quan khu rừng.
+                </p>
+
+                <p class="credit">
+                    Nguồn ảnh:
+                    <a href="https://commons.wikimedia.org/wiki/File:R%E1%BB%ABng_Tr%C3%A0m_Tr%C3%A0_S%C6%B0.JPG"
+                    target="_blank">Wikimedia Commons</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- MIẾU BÀ CHÚA XỨ -->
+        <div class="place-card">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Mi%E1%BA%BFu_B%C3%A0_Ch%C3%BAa_X%E1%BB%A9%2C_b%C3%AAn_trong.JPG"
+                alt="Bên trong Miếu Bà Chúa Xứ Núi Sam"
+                loading="lazy"
+            >
+
+            <div class="content">
+                <h3>3. Miếu Bà Chúa Xứ Núi Sam</h3>
+
+                <p>
+                    Đây là địa điểm du lịch tâm linh nổi tiếng
+                    tại Châu Đốc. Công trình có kiến trúc đặc sắc,
+                    gắn liền với đời sống tín ngưỡng và lễ hội
+                    truyền thống của người dân Nam Bộ.
+                </p>
+
+                <p class="credit">
+                    Nguồn ảnh:
+                    <a href="https://commons.wikimedia.org/wiki/File:Mi%E1%BA%BFu_B%C3%A0_Ch%C3%BAa_X%E1%BB%A9,_b%C3%AAn_trong.JPG"
+                    target="_blank">Wikimedia Commons</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- HỒ TÀ PẠ -->
+        <div class="place-card">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/2/25/Hotapa.jpg"
+                alt="Hồ Tà Pạ, Tri Tôn, An Giang"
+                loading="lazy"
+            >
+
+            <div class="content">
+                <h3>4. Hồ Tà Pạ</h3>
+
+                <p>
+                    Hồ Tà Pạ nằm tại khu vực Tri Tôn. Hồ nước
+                    được bao quanh bởi những vách đá và cây xanh,
+                    tạo nên khung cảnh thiên nhiên yên bình,
+                    độc đáo.
+                </p>
+
+                <p class="credit">
+                    Nguồn ảnh:
+                    <a href="https://commons.wikimedia.org/wiki/File:Hotapa.jpg"
+                    target="_blank">Wikimedia Commons</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ẨM THỰC -->
+<section class="food" id="amthuc">
+    <div class="section-title">
+        <h2>Ẩm thực An Giang</h2>
+        <p>Hương vị đặc trưng của miền Tây</p>
+    </div>
+
+    <div class="food-list">
+
+        <div class="food-item">
+            <h3>Bún cá Châu Đốc</h3>
+            <p>
+                Món ăn nổi tiếng với nước dùng đậm đà,
+                cá tươi và hương vị đặc trưng miền Tây.
+            </p>
+        </div>
+
+        <div class="food-item">
+            <h3>Gỏi sầu đâu</h3>
+            <p>
+                Món gỏi dân dã kết hợp lá sầu đâu,
+                khô cá và các loại gia vị.
+            </p>
+        </div>
+
+        <div class="food-item">
+            <h3>Đường thốt nốt</h3>
+            <p>
+                Đặc sản gắn liền với vùng đất An Giang,
+                có vị ngọt thơm đặc trưng.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- VĂN HÓA -->
+<section class="culture" id="vanhoa">
+    <div class="section-title">
+        <h2>Văn hóa và con người</h2>
+    </div>
+
+    <p>
+        An Giang là nơi sinh sống của nhiều cộng đồng dân tộc
+        với những nét văn hóa riêng biệt. Các lễ hội truyền thống,
+        kiến trúc tôn giáo, làng nghề và phong tục tập quán đã
+        góp phần tạo nên bản sắc phong phú cho vùng đất này.
+    </p>
+
+    <br>
+
+    <p>
+        Con người An Giang nổi tiếng với sự chân thành,
+        hiếu khách và nét sống giản dị, gần gũi.
+    </p>
+</section>
+
+<!-- CHÂN TRANG -->
+<footer>
+    <h3>KHÁM PHÁ AN GIANG</h3>
+    <p>Vẻ đẹp thiên nhiên - Văn hóa - Con người miền Tây</p>
+    <p>Website giới thiệu du lịch An Giang</p>
+    <p>© 2026 - Thiết kế bởi học sinh</p>
+</footer>
+
+</body>
+</html>
